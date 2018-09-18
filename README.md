@@ -4,6 +4,6 @@
 
 > cd ArthurSlogMarkdownEditor
 
-> sudo npm i --unsafe-perm=true
+> sudo npm i (MacOS need to command 'sudo npm i --unsafe-perm=true')
 
 > sudo npm run start
