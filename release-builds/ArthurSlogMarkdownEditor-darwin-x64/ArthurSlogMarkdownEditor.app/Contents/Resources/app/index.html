@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ArthurSlogMD</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="container">
+        <!-- ArthurSlog_Manual_Area -->
+        <div id="editorManual">
+            <div id="editorManual_Title">
+                <p id="editorManual_Title_Arthur">Arthur</p>
+                <p id="editorManual_Title_Slog">Slog</p>
+                <p id="editorManual_Title_createCenter">创作中心</p>
+            </div>
+            <div id="editorManual_middleLine"></div>
+            <div id="editorManual_Tool">
+                <p>building...</p>
+            </div>
+        </div>
+        <div id="editorContent">
+            <!-- ArthurSlog_MarkdownEditor_Area -->
+            <div id="sourceCode_Markdown" contenteditable="true"></div>
+
+            <div id="middleLine"></div>
+            <!-- ArthurSlog_MarkdownToHTML_AREA -->
+            <div id="resultCode_HTML"></div>
+        </div>
+    </div>
+
+    <script>
+        require('markdown-it')
+        const md = require('markdown-it')();
+
+        document.getElementById("sourceCode_Markdown").addEventListener('input', function () {
+            document.getElementById("resultCode_HTML").innerHTML = md.render(document.getElementById("sourceCode_Markdown").innerText)
+        }, false);
+        // target.addEventListener(type, listener, options);
+        // target.addEventListener(type, listener ,{capture: Boolean, passive: Boolean, once: Boolean});
+        // target.addEventListener(type, listener, useCapture);
+        // target.addEventListener(type, listener[, useCapture, wantsUntrusted  ]); 
+        // ---
+        // 1. target = document.getElementById("basic")
+        // 2. type = 'input'
+        // 3. listener = document.getElementById("resultHTML").innerHTML = window.markdownit().render(document.getElementById("basic").value)
+        // 4. options = false
+        // =>
+        // 5. target.addEventListener(type, listener, options)
+        //document.getElementById("sourceCode_Markdown").addEventListener('input', function () { document.getElementById("resultCode_HTML").innerHTML = window.markdownit().render(document.getElementById("sourceCode_Markdown").innerText) }, false);
+        //document.getElementById("sourceCode_Markdown").addEventListener('paste', function () { document.getElementById("sourceCode_Markdown").innerText = document.getElementById("sourceCode_Markdown").innerText.toString()}, false);
+        document.getElementById("sourceCode_Markdown").style.boxShadow = "none";
+        document.getElementById("sourceCode_Markdown").style.textShadow = "none";
+        document.getElementById("sourceCode_Markdown").style.outlineColor = "none";
+        document.getElementById("sourceCode_Markdown").style.outlineStyle = "none";
+        document.getElementById("sourceCode_Markdown").style.outline = "none";
+        document.getElementById("sourceCode_Markdown").style.borderColor = "none";
+    </script>
+
+    <style>
+        html,
+        body {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            max-width: 100%;
+            max-height: 100%;
+            overflow: hidden;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+        }
+
+        #EditorManual {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin: 0;
+            height: 15vh;
+        }
+
+        #editorManual_Title {
+            margin-left: 0%;
+            margin-right: 0%;
+            height: 9.5vh;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #editorManual_Title_Arthur {
+            font-size: 28px;
+            font-style: italic;
+            color: rgb(255, 0, 0);
+            font-weight: 800;
+            position: absolute;
+            margin: 0;
+            top: calc(4%);
+            padding-left: 56px;
+        }
+
+        #editorManual_Title_Slog {
+            font-size: 28px;
+            font-style: italic;
+            color: rgb(17, 1, 1);
+            font-weight: 800;
+            position: absolute;
+            margin: 0;
+            top: calc(4%);
+            padding-left: 138px;
+        }
+
+        #editorManual_Title_createCenter {
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(114, 123, 128);
+            position: absolute;
+            margin: 0;
+            top: calc(4% + 6px);
+            padding-left: 208px;
+        }
+
+        #editorManual_middleLine {
+            margin: 0;
+            padding: 0;
+            height: 0.5vh;
+            background-color: rgba(241, 248, 255, 0.966);
+        }
+
+        #editorManual_Tool {
+            margin-left: 0%;
+            margin-right: 0%;
+            height: 5vh;
+        }
+
+        #editorManual_Tool>p {
+            font-size: 16px;
+            font-style: italic;
+            position: relative;
+            top: calc(100% - 20px);
+            margin: 0;
+            padding-left: 56px;
+        }
+
+        #editorContent {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sourceCode_Markdown {
+            width: 47.5vw;
+            height: 85vh;
+            margin-left: 0%;
+            margin-right: 0%;
+            overflow: scroll;
+            background-color: rgba(199, 206, 212, 0.678);
+            text-decoration: none;
+        }
+
+        #middleLine {
+            width: 5vw;
+            height: 85vh;
+            overflow: hidden;
+            background-color: ghostwhite;
+        }
+
+        #resultCode_HTML {
+            width: 47.5vw;
+            height: 85vh;
+            margin-left: 0%;
+            margin-right: 0%;
+            overflow: scroll;
+            background-color: ghostwhite;
+        }
+    </style>
+</body>
+
+</html>
