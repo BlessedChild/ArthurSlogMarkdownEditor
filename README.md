@@ -1,5 +1,7 @@
 # ArthurSlogMarkdownEditor
 
+![ArthurSlogMarkdownEditor_icon]()
+
 > git clone https://github.com/BlessedChild/ArthurSlogMarkdownEditor.git
 
 > cd ArthurSlogMarkdownEditor
