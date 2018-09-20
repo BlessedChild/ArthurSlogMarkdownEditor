@@ -3,19 +3,22 @@
   "productName": "ArthurSlogMarkdownEditor",
   "version": "0.1.0",
   "description": "This is a Browser by Nodejs",
+  "private": "true",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron  .",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/ICON.png.icns --prune=true --out=release-builds",
     "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/ICON.png.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ArthurSlogMarkdownEditor\"",
-    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/linux/ICON.png --prune=true --out=release-builds"
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/linux/ICON.png --prune=true --out=release-builds",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/ArthurSlogMarkdownEditor-darwin-x64/ArthurSlogMarkdownEditor.app ArthurSlogMarkdownEditor --out=release-builds --overwrite --icon=assets/icons/mac/ICON.png.icns"
   },
   "keywords": [],
   "author": "ArthurSlog",
   "license": "ISC",
   "devDependencies": {
     "electron": "^2.0.9",
+    "electron-installer-dmg": "^2.0.0",
     "electron-packager": "^12.1.2"
   },
   "dependencies": {
