@@ -1,6 +1,6 @@
 # ArthurSlogMarkdownEditor
 
-![ArthurSlogMarkdownEditor_icon]()
+![ArthurSlogMarkdownEditor_icon](https://github.com/BlessedChild/ArthurSlogMarkdownEditor/blob/master/icon_.png?raw=true)
 
 > git clone https://github.com/BlessedChild/ArthurSlogMarkdownEditor.git
 
